@@ -1,2 +1,2 @@
-primer repositorio hecho en github, se subirán proyectos personales en este para mejorar mis habilidades de programación y capacitarme en diversas áreas
+primer repositorio hecho en github, se subirán archivos relacionados a este para mejorar mis habilidades de programación
 en este repositorio se construye una página web usando HTML Y CSS básico
