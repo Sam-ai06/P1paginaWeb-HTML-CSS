@@ -1,84 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Monstserrat", sans-serif;
+    font-size: 20px;
+
+}
+
 body{
-    background-color: rgb(22, 25, 32);
-    position: relative;
-}   
-
-.contenedor-titulo{
-    background-color:rgb(30, 35, 45);
-    color:antiquewhite;
-    display: flex;
-    border-radius:5px;
+    background-color: rgb(31, 35, 46);
 }
 
-.contenedor-secciones{
-    background-color:rgb(30, 35, 45);
-    color:antiquewhite;
+.header{
+    background-color: rgb(43, 48, 59);
     display: flex;
-    border-radius:5px;
-    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px, 10%;
 }
 
-.contenedor-principal{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    background-color:rgb(30, 35, 45);;
-}
-.boton{
-    background-color: rgb(51, 54, 61);
-    color: antiquewhite;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    font-size: 17px;
-    font-family: "Montserrat", sans-serif;
+.header .logo{
     cursor: pointer;
-    border: 2px solid antiquewhite;
-    display: flex;
-    justify-content: center;
-
 }
 
-h1{
-    font-family: "PT Sans Narrow", sans-serif;
-    text-align: center;
-    font-size: 40px;
+.header .logo img{
+    height: 45px;
+    width: auto;
+    transition: all 0.3s;
     margin-left: 10px;
+   
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
 
 }
 
-h2{
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 30px;
-    font-style: italic;
-    text-align: justify;
-    color: white;
+.header .nav-links{
+    list-style: none;
+    
+    
 }
-
-h3{
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 30px;
-    font-style: italic;
-    color: white;
-    margin: 10px;
-    text-align: center;
-    padding-top: 10px;
-}
-
-p{
-    font-family: "Montserrat", sans-serif;
-    font-size: 25px;
-    color: white;
-    margin: 10px;
-    font-style: italic;
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
     
 }
 
-img[alt]{
-    width: 600px;
-    height: 350px;
-    margin: 7px;
+.header  .nav-links li a{
+    text-decoration: none;
+    color: rgb(253, 255, 223);
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    
 }
 
+.header .nav-links li:hover{
+    transform: scale(1.2);
+    transition: all 0.2s;
+    
+     
+}
 
+.header .nav-links li a:hover{
+    font-size: 700;
+    text-decoration: none;
+    color: rgb(253, 255, 223);
+    transition: all 0.3s;   
+}
 
+.header .boton button{
+    font-weight: 700;
+    color: black;
+    padding: 9px 25px;
+    background-color: rgb(218, 227, 235);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 20px;
+    font-family: "Raleway", sans-serif;
+}
+
+.header .boton button:hover{
+    background-color:rgb(237, 249, 255);
+    color: rgb(79, 110, 128);
+}
