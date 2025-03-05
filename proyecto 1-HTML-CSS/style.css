@@ -1,84 +1,114 @@
-body{
-    background-color: rgb(22, 25, 32);
-    position: relative;
-}   
-
-.contenedor-titulo{
-    background-color:rgb(30, 35, 45);
-    color:antiquewhite;
-    display: flex;
-    border-radius:5px;
+/* TODO: agregué variables para tus colores ya que los utilizas mucho, entonces si necesitases cambiar el color de tu pagina solo cambiarias el color en la variable, y no en todas las veces que pusiste el color manualmente xd. Puedes crear más variables si lo necesitas.  
+ */
+:root {
+  --color-fondo: rgb(22, 25, 32);
+  --color-principal: rgb(30, 35, 45);
 }
 
-.contenedor-secciones{
-    background-color:rgb(30, 35, 45);
-    color:antiquewhite;
-    display: flex;
-    border-radius:5px;
-    margin-top: 15px;
+body {
+  background-color: var(--color-fondo);
+  position: relative;
 }
 
-.contenedor-principal{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    background-color:rgb(30, 35, 45);;
-}
-.boton{
-    background-color: rgb(51, 54, 61);
-    color: antiquewhite;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    font-size: 17px;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer;
-    border: 2px solid antiquewhite;
-    display: flex;
-    justify-content: center;
-
+.contenedor-titulo {
+  background-color: var(--color-principal);
+  color: antiquewhite;
+  border-radius: 5px;
 }
 
-h1{
-    font-family: "PT Sans Narrow", sans-serif;
-    text-align: center;
-    font-size: 40px;
-    margin-left: 10px;
-
+/* TODO: aquí agregué el justify-content: space-around para separar los botones con el mismo espaciado entre ellos, pero con la mitad del espaciado para los extremos, esto lo hago aquí porque este div contiene los botones.
+ */
+.contenedor-secciones {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-principal);
+  color: antiquewhite;
+  border-radius: 5px;
+  padding: 5px 0;
+  margin-top: 15px;
 }
 
-h2{
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 30px;
-    font-style: italic;
-    text-align: justify;
-    color: white;
+.contenedor-principal {
+  background-color: var(--color-principal);
 }
 
-h3{
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 30px;
-    font-style: italic;
-    color: white;
-    margin: 10px;
-    text-align: center;
-    padding-top: 10px;
+/* TODO: Aquí cambie bastante, primero usé grid porque me desesperó el flex (perdon), y como tal ya no estoy estilizando el padre o sea el contenedor.principal porque ese contiene más elementos, y solo se necesita manipular las imagenes, y lo que estoy haciendo con la propiedad grid-template-colums es crear 3 columnas de 1 fracción cada una, las fracciones representan partes iguales del ancho de tu contenedor padre, o sea como son 3 cada imagen ocupa 33% del ancho del padre, y el gap es el espaciado entre las filas y columnas 
+ */
+.galeria-imagenes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: var(--color-principal);
 }
 
-p{
-    font-family: "Montserrat", sans-serif;
-    font-size: 25px;
-    color: white;
-    margin: 10px;
-    font-style: italic;
-    
+.boton {
+  /* TODO: estas dos propiedades de aquí no son necesarias ya que el flex se lo utiliza en el padre (el div que los contiene), que en este caso es el .contenedor-secciones.
+  /* display: flex;
+  justify-content: center; 
+  */
+  background-color: rgb(51, 54, 61);
+  color: antiquewhite;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 12px;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border: 2px solid antiquewhite;
 }
 
-img[alt]{
-    width: 600px;
-    height: 350px;
-    margin: 7px;
+/* TODO: Aquí agregué unos estilos que invierten los colores de los botones al hacer hover (poner el cursor encima) sobre alguno de ellos.
+ */
+.boton:hover {
+  background-color: antiquewhite;
+  color: rgb(51, 54, 61);
 }
 
+h1 {
+  font-family: "PT Sans Narrow", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  letter-spacing: 10px;
+}
 
+/* TODO: Espaciado entre letras con la propiedad letter-spacing
+ */
+h2 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  text-align: justify;
+  padding: 10px;
+  color: white;
+  letter-spacing: 5px;
+}
 
+h3 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* TODO: Aquí agregué espaciado entre las lineas del parrafo con la propiedad line-height.
+ */
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: white;
+  margin: 10px;
+  font-style: italic;
+  line-height: 50px;
+}
+
+img[alt] {
+  width: 100%;
+  height: 350px;
+  margin: 7px;
+}
